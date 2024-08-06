@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "yuria.oldenchant.mixins",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "OldEnchant.refmap.json",
+  "mixins": [
+    "EnchantCmd",
+    "Enchantments",
+    "Enchants",
+    "ItemEnchantsMixin",
+    "MutableItemEnchants"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
