@@ -7,7 +7,7 @@ import com.teamresourceful.resourcefulconfig.api.types.options.EntryType;
 @Config(OldEnchant.MODID)
 public final class OldEnchantConfig {
     @ConfigEntry(type =  EntryType.INTEGER, id = "maxLevel", translation = "Max level")
-    @ConfigOption.Range(min = 255, max = 2^30)
+    @ConfigOption.Range(min = 255, max = Constants.MAX_LIMIT)
     @Comment("The Max level for enchantments")
     public static int maxLevel = Short.MAX_VALUE;
 }

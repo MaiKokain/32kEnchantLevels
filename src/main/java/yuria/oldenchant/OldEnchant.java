@@ -23,12 +23,4 @@ public class OldEnchant
         CONFIGURATOR.register(OldEnchantConfig.class);
         modContainer.registerExtensionPoint(IConfigScreenFactory.class, (container, modListScreen) -> ResourcefulConfigScreen.getFactory(MODID).apply(modListScreen));
     }
-
-    public static int returnLevel()
-    {
-
-        LOGGER.info(String.valueOf(OldEnchantConfig.maxLevel));
-        LOGGER.info("MAX LIMIT {}", OldEnchantConfig.maxLevel);
-        return OldEnchantConfig.maxLevel;
-    }
 }
