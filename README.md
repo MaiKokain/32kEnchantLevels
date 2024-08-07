@@ -19,16 +19,16 @@ a simple mod that patches Minecraft's enchant system to allow over 255 (just lik
    ```
    cd ./32kEnchantLevels
    ```
-4. After changing directory run\
-   \
+4. After changing directory run
    To build with version add the flag `-Pmod_version=VERSION` before the `build` argument
-   6. Windows (PWSH, CMD...)
+   
+   4.1. Windows (PWSH, CMD...)
       ```
       ./gradlew.bat build
       ```
-   6. UNIX (git bash, etc...)
+   4.1. UNIX (git bash, etc...)
       ```
       ./gradlew build
       ```
-5. After building the mod should be in `./build/libs/`
-6. Copy or Move `oldenchant-MASTER-all.jar` into your mods folder.
+6. After building the mod should be in `./build/libs/`
+7. Copy or Move `oldenchant-MASTER-all.jar` into your mods folder.
