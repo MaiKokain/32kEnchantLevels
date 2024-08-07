@@ -1,21 +1,27 @@
 package yuria.oldenchant.mixins;
 
-import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
-import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
+import com.mojang.brigadier.exceptions.Dynamic2CommandExceptionType;
+import com.mojang.brigadier.exceptions.DynamicCommandExceptionType;
+import com.mojang.brigadier.exceptions.SimpleCommandExceptionType;
 import net.minecraft.server.commands.EnchantCommand;
-import net.minecraft.world.item.enchantment.Enchantment;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.At;
-import yuria.oldenchant.OldEnchantConfig;
+import org.spongepowered.asm.mixin.gen.Accessor;
 
 @Mixin(EnchantCommand.class)
-public class EnchantCmd {
-    @WrapOperation(
-            method = "enchant",
-            at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/enchantment/Enchantment;getMaxLevel()I")
-    )
-    private static int setFakeLevel(Enchantment instance, Operation<Integer> original)
-    {
-        return OldEnchantConfig.maxLevel;
-    }
+public interface EnchantCmd {
+    @Accessor("ERROR_NOT_LIVING_ENTITY")
+    static DynamicCommandExceptionType ERROR_NOT_LIVING_ENTITY() { throw new AssertionError(); }
+
+    @Accessor("ERROR_NO_ITEM")
+    static DynamicCommandExceptionType ERROR_NO_ITEM() { throw new AssertionError(); }
+
+    @Accessor("ERROR_INCOMPATIBLE")
+    static DynamicCommandExceptionType ERROR_INCOMPATIBLE() { throw new AssertionError(); }
+
+    @Accessor("ERROR_LEVEL_TOO_HIGH")
+    static Dynamic2CommandExceptionType ERROR_LEVEL_TOO_HIGH() { throw new AssertionError(); }
+
+    @Accessor("ERROR_NOTHING_HAPPENED")
+    static SimpleCommandExceptionType ERROR_NOTHING_HAPPENED() { throw new AssertionError(); }
+
 }

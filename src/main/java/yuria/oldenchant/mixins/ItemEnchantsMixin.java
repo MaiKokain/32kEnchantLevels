@@ -3,7 +3,6 @@ package yuria.oldenchant.mixins;
 import net.minecraft.world.item.enchantment.ItemEnchantments;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.*;
-import yuria.oldenchant.OldEnchant;
 import yuria.oldenchant.OldEnchantConfig;
 
 @Mixin(ItemEnchantments.class)

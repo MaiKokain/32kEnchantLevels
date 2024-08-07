@@ -20,7 +20,6 @@ public class OldEnchant
 
     public OldEnchant(IEventBus modEventBus, ModContainer modContainer)
     {
-        CONFIGURATOR.register(OldEnchantConfig.class);
         modContainer.registerExtensionPoint(IConfigScreenFactory.class, (container, modListScreen) -> ResourcefulConfigScreen.getFactory(MODID).apply(modListScreen));
     }
 }
