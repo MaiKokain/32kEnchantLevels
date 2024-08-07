@@ -1,6 +1,8 @@
 # 32k Enchant Levels
 a simple mod that patches Minecraft's enchant system to allow over 255 (just like the old days of 32K enchantment levels)
 
+[Modrinth](https://modrinth.com/mod/32k-enchants/version/latest)
+
 # Building
 
 ### Prerequisite
